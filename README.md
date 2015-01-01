@@ -77,3 +77,13 @@ if (postResult.hasError()) {
 
 System.out.println("Paste pubblicato! Url: " + postResult.get());
 ```
+
+It will execute a request to Pastebin which will try to post the Paste.
+
+If something went wrong, `hasError` will return true, and using `.getError()`  you will get the reason.
+
+If everything is OK, `get()` will contains the object you asked.
+
+`post()` method returns the paste key.
+
+The same logic will apply to everything else in the API.

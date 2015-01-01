@@ -3,57 +3,63 @@ package com.besaba.revonline.pastebinapi.paste;
 import com.besaba.revonline.pastebinapi.response.Response;
 
 /**
- * Rappresenta un paste
+ * A paste
  */
 public interface Paste {
   /**
-   * Deve ritornare la chiave del Paste, un identificatore univoco per ogni paste.
+   * Should return the key of the paste.
    *
-   * @return Identificatore univoco di ogni paste
+   * @return The paste key
    */
   public String getKey();
 
   /**
-   * @return Il risultato della richiesta del titolo del paste
+   * @return The paste title
    */
   public String getTitle();
 
   /**
-   * @return Il risultato della richiesta della lunghezza del paste (in bytes)
+   * @return The paste size (in bytes)
    */
   public long getSize();
 
   /**
-   * @return Il risultato della richiesta del linguaggio in un formato amichevole per l'utente
+   * @return The language of the paste (in a user-friendly format)
    */
   public String getUserFriendlyLanguage();
 
   /**
-   * @return Il risultato della richiesta del linguaggio in un formato amichevole per la macchina
+   * @return The language of the paste (in a machine-friendly format)
    */
   public String getMachineFriendlyLanguage();
 
   /**
-   * @return Ritorna il numero di visite di un paste
+   * @return The number of views of the paste
    */
   public int getHits();
 
   /**
-   * @return Ritorna il risultato della richiesta del livello di visiblità del paste
+   * @return The visibility of the paste
    */
   public PasteVisiblity getVisiblity();
 
   /**
-   * @return Ritorna il risultato della richiesta del valore Expire del paste
+   * @return The expire duration of the paste
    */
   public PasteExpire getExpire();
 
+  /**
+   * @return Returns when the paste has been published
+   */
   public long getPublishDate();
 
+  /**
+   * @return Returns how much time left before the paste expires
+   */
   public long getRemainingTime();
 
   /**
-   * @return Il risultato della richiesta di ottenere il contenuto del paste
+   * @return Request the paste raw
    */
   public Response<String> getRaw();
 }

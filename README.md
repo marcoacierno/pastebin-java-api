@@ -3,6 +3,8 @@ Pastebin API -- Java
 
 This library uses official [Pastebin API](http://pastebin.com/api) to read information from Pastebin.
 
+The documentation and Wiki is still in working
+
 Getting started
 ==
 

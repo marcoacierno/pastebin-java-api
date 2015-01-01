@@ -4,32 +4,29 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Rappresenta una risposta ottenuta dalla API
+ * It's a Response from the Pastebin
  */
 public interface Response<T> {
   /**
-   * Deve leggere il valore che la richiesta ha prodotto se presente (quindi hasError() == false)
-   * altrimenti generare l'eccezione PasteException
+   * If the request has been completed with success, it should return the object or
+   * should throw ParseException if failed.
    *
-   * @return Se presente ritorna il risultato della risposta oppure genera PasteException
+   *
+   * @see Response#hasError()
+   * @return If it's a successful request, it returns the object.
    */
   @NotNull
   public T get();
 
   /**
-   * Deve ritornare true se la richiesta è fallita e quindi una chiamata a get()
-   * può causare l'eccezione PasteException oppure false se la richiesta
-   * è stata completata con successo.
+   * It should return true if the request failed, or false if not.
+   *
    */
   public boolean hasError();
 
   /**
-   * Se hasError() ritorna false questo metodo deve contenere il motivo per cui la
-   * richiesta è fallita.
-   * <p/>
-   * Se hasError() ritorna true, questo metodo può ritornare null.
-   *
-   * @return Il metivo del fallimento
+   * @return null if the request has been completed with success. Or the error string
+   * if the request failed.
    */
   @Nullable
   public String getError();

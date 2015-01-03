@@ -1,9 +1,9 @@
 package com.besaba.revonline.pastebinapi.paste.internal;
 
 import com.besaba.revonline.pastebinapi.impl.xml.ParseXmlHandler;
+import com.besaba.revonline.pastebinapi.internal.utils.HttpEndpointConnection;
 import com.besaba.revonline.pastebinapi.paste.Paste;
 import com.besaba.revonline.pastebinapi.response.Response;
-import com.besaba.revonline.pastebinapi.utils.HttpEndpointConnection;
 import org.jetbrains.annotations.NotNull;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;

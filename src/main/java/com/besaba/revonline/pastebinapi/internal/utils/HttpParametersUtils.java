@@ -1,4 +1,4 @@
-package com.besaba.revonline.pastebinapi.utils;
+package com.besaba.revonline.pastebinapi.internal.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

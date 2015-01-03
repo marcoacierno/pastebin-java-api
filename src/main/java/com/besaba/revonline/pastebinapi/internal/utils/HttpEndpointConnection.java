@@ -1,4 +1,4 @@
-package com.besaba.revonline.pastebinapi.utils;
+package com.besaba.revonline.pastebinapi.internal.utils;
 
 import com.besaba.revonline.pastebinapi.response.Response;
 import com.besaba.revonline.pastebinapi.response.Responses;

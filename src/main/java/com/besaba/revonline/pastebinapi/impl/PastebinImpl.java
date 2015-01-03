@@ -2,12 +2,12 @@ package com.besaba.revonline.pastebinapi.impl;
 
 import com.besaba.revonline.pastebinapi.Pastebin;
 import com.besaba.revonline.pastebinapi.impl.user.internal.Users;
+import com.besaba.revonline.pastebinapi.internal.utils.HttpEndpointConnection;
 import com.besaba.revonline.pastebinapi.paste.Paste;
 import com.besaba.revonline.pastebinapi.paste.internal.Pastes;
 import com.besaba.revonline.pastebinapi.response.Response;
 import com.besaba.revonline.pastebinapi.response.Responses;
 import com.besaba.revonline.pastebinapi.user.User;
-import com.besaba.revonline.pastebinapi.utils.HttpEndpointConnection;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.xml.sax.SAXException;

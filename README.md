@@ -5,6 +5,41 @@ This library uses the official [Pastebin API](http://pastebin.com/api) to read i
 
 The documentation and Wiki is still in working
 
+Fast examples
+===
+
+Read paste content
+---
+
+```
+final PastebinFactory factory = new PastebinFactory();
+final Pastebin pastebin = factory.createPastebin(DEV_KEY);
+final String pasteKey = "LAZD9ZCs";
+final Response<String> pasteResponse = pastebin.getRawPaste(pasteKey);
+if (pasteResponse.hasError()) {
+  System.out.println("Unable to read paste content!");
+  return;
+}
+System.out.println(pasteResponse.get());
+```
+
+Read trending pastes
+---
+
+```
+final PastebinFactory factory = new PastebinFactory();
+final Pastebin pastebin = factory.createPastebin(DEV_KEY);
+final Response<String> pasteResponse = pastebin.getTrendingPastes();
+if (pasteResponse.hasError()) {
+  System.out.println("Unable to read trendings!");
+  return;
+}
+final List<Paste> pastes = pasteResponse.get();
+for(Paste paste : pastes) {
+  System.out.println("Paste title: " + paste.getTitle());
+}
+```
+
 Getting started
 ==
 

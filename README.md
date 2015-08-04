@@ -5,6 +5,32 @@ This library uses the official [Pastebin API](http://pastebin.com/api) to read i
 
 The documentation and Wiki is still in working
 
+Maven
+===
+
+Add Revonline repository
+
+```
+<repositories>
+  <repository>
+    <id>revonline-repository</id>
+    <name>Revonline Maven Repository</name>
+    <url>http://revonline.comuf.com/maven3/</url>
+  </repository>
+</repositories>
+```
+
+then add Pastebin dependency
+
+```
+<dependency>
+	<groupId>com.besaba.revonline</groupId>
+	<artifactId>Pastebin</artifactId>
+	<version>0.1.1</version>
+</dependency>
+```
+
+
 Fast examples
 ===
 

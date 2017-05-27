@@ -3,33 +3,7 @@ Pastebin API -- Java
 
 This library uses the official [Pastebin API](http://pastebin.com/api) to read information from Pastebin.
 
-The documentation and Wiki is still in working
-
-Maven
-===
-
-Add Revonline repository
-
-```
-<repositories>
-  <repository>
-    <id>revonline-repository</id>
-    <name>Revonline Maven Repository</name>
-    <url>http://revonline.comuf.com/maven3/</url>
-  </repository>
-</repositories>
-```
-
-then add Pastebin dependency
-
-```
-<dependency>
-	<groupId>com.besaba.revonline</groupId>
-	<artifactId>Pastebin</artifactId>
-	<version>0.1.1</version>
-</dependency>
-```
-
+Go to the [release page](https://github.com/marcoacierno/pastebin-java-api/releases/latest) to download the jar file
 
 Fast examples
 ===

@@ -109,6 +109,7 @@ public class HttpEndpointConnection<T> {
 
     for(String line; (line = inputReader.readLine()) != null;) {
       responseBuilder.append(line);
+      responseBuilder.append('\n');
     }
 
     return responseBuilder.toString();

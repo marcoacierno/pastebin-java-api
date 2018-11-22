@@ -11,7 +11,7 @@ Fast examples
 Read paste content
 ---
 
-```
+```java
 final PastebinFactory factory = new PastebinFactory();
 final Pastebin pastebin = factory.createPastebin(DEV_KEY);
 final String pasteKey = "LAZD9ZCs";
@@ -26,7 +26,7 @@ System.out.println(pasteResponse.get());
 Read trending pastes
 ---
 
-```
+```java
 final PastebinFactory factory = new PastebinFactory();
 final Pastebin pastebin = factory.createPastebin(DEV_KEY);
 final Response<String> pasteResponse = pastebin.getTrendingPastes();
@@ -56,7 +56,7 @@ Using `Pastebin` class you can get informations from Pastebin.
 
 You can create a Pastebin object using `PastebinFactory` which will be useful to create a `Paste` object too.
 
-```
+```java
 final PastebinFactory factory = new PastebinFactory();
 final Pastebin pastebin = factory.createPastebin(DEV_KEY);
 ```
@@ -74,7 +74,7 @@ if your request has been completed with success or not.
 To post a Paste you will use the `PastebinFactory` to let it create a `PasteBuilder` object for you.
 You will use this Builder to insert Paste information
 
-```
+```java
 // get a pastebuilder to build the paste I want to publish
 final PasteBuilder pasteBuilder = factory.createPaste();
 
@@ -98,13 +98,13 @@ using the syntax `text`, visibility `Public` and it will expire in ten minutes.
 
 Our `Paste` is ready. 
 
-```
+```java
 final Paste paste = pasteBuilder.build();
 ```
 
 using `.build()` method we create the `Paste` object which will be passed to `pastebin.post` to post it.
 
-```
+```java
 final Response<String> postResult = pastebin.post(paste);
 
 if (postResult.hasError()) {

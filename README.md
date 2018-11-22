@@ -40,6 +40,44 @@ for(Paste paste : pastes) {
 }
 ```
 
+Add to your project
+==
+
+*Note: Replace 'VERSION' with the latest version in the 'Releases' tab. Example:* `v0.2.1`
+
+**Maven:**
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.marcoacierno</groupId>
+    <artifactId>pastebin-java-api</artifactId>
+    <version>VERSION</version>
+</dependency>
+```
+
+**Gradle:**
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation 'com.github.marcoacierno:pastebin-java-api:VERSION'
+}
+```
+
+
 Getting started
 ==
 
